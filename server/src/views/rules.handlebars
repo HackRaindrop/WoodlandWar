@@ -1,0 +1,97 @@
+<h2>Game Rules</h2>
+
+<div class="card">
+  <h3>Overview</h3>
+  <p>
+    Woodland War is an asymmetric strategy game for 2-4 players. Each player controls a unique faction 
+    vying for control of the great woodland. The first player to score 30 victory points—or to 
+    fulfill their dominance card condition—wins the game!
+  </p>
+</div>
+
+<div class="card">
+  <h3>The Woodland</h3>
+  <p>
+    The game board represents a woodland divided into 12 clearings connected by paths. Each clearing 
+    belongs to one of three suits: Fox, Rabbit, or Mouse. Clearings have building slots that limit 
+    how many structures can be built there.
+  </p>
+  <ul>
+    <li><strong>Paths:</strong> Connect clearings and allow movement between them</li>
+    <li><strong>Rivers:</strong> Some paths follow rivers, which may affect certain actions</li>
+    <li><strong>Forests:</strong> The spaces between clearings are forests, where the Wanderer can hide</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>Turn Structure</h3>
+  <p>Each turn consists of three phases:</p>
+  <ul>
+    <li><strong>Birdsong:</strong> Start-of-turn effects based on your faction</li>
+    <li><strong>Daylight:</strong> Take actions to advance your position</li>
+    <li><strong>Evening:</strong> Draw cards and score points</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>Basic Actions</h3>
+  <ul>
+    <li><strong>Move:</strong> Move warriors from one clearing to an adjacent clearing. You must rule the origin or destination.</li>
+    <li><strong>Battle:</strong> Attack another faction in a clearing where you have warriors. Roll dice to determine hits.</li>
+    <li><strong>Build:</strong> Place a building in a clearing you rule with an open building slot.</li>
+    <li><strong>Recruit:</strong> Add new warriors to clearings based on your faction's rules.</li>
+    <li><strong>Craft:</strong> Use cards matching clearings you rule to craft items for victory points.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>Rule &amp; Combat</h3>
+  <p>
+    A faction <strong>rules</strong> a clearing if they have the most combined warriors and buildings there. 
+    Ties mean no one rules.
+  </p>
+  <p>
+    In <strong>combat</strong>, each player rolls a die (0-3). The attacker deals hits equal to the higher 
+    roll (max: defender's pieces), and the defender deals hits equal to the lower roll (max: attacker's warriors). 
+    Warriors are removed first, then buildings. Removing buildings scores victory points!
+  </p>
+</div>
+
+<h2>The Factions</h2>
+
+{{#each factions}}
+<div class="card faction-card">
+  <div class="faction-icon {{id}}">
+    {{#if (eq id "ironwood")}}⚙️{{/if}}
+    {{#if (eq id "eyrie")}}🦅{{/if}}
+    {{#if (eq id "alliance")}}🐿️{{/if}}
+    {{#if (eq id "wanderer")}}🦊{{/if}}
+  </div>
+  <div class="faction-info">
+    <h3>{{name}}</h3>
+    <p>{{description}}</p>
+    <div class="faction-meta">
+      <span class="badge">Difficulty: {{difficulty}}</span>
+      <span class="badge">{{playstyle}}</span>
+    </div>
+  </div>
+</div>
+{{/each}}
+
+<div class="card">
+  <h3>Victory Conditions</h3>
+  <ul>
+    <li><strong>Victory Points:</strong> First to 30 VP wins immediately</li>
+    <li><strong>Dominance:</strong> Play a dominance card to change your win condition to controlling specific clearings</li>
+    <li><strong>Coalition:</strong> The Wanderer may form a coalition with another player to share victory</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>Cards &amp; Crafting</h3>
+  <p>
+    The shared deck contains Ambush cards (for combat), Item cards (for crafting), and special Favor cards 
+    (powerful effects). To craft an item, you must rule clearings matching the card's crafting cost. 
+    Crafted items score victory points or give you powerful abilities.
+  </p>
+</div>

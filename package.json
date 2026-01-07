@@ -1,0 +1,24 @@
+{
+  "name": "woodland-war",
+  "version": "1.0.0",
+  "description": "A woodland strategy board game - web adaptation",
+  "private": true,
+  "engines": {
+    "node": ">=18.x"
+  },
+  "scripts": {
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "build": "cd client && npm install --include=dev && npm run build && cd ../server && npm install",
+    "start": "cd server && npm start",
+    "heroku-postbuild": "cd client && npm install --include=dev && npm run build && cd ../server && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "mongodb": "^7.0.0"
+  }
+}

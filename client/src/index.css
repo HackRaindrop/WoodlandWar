@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --forest-dark: #1a2f23;
+  --forest-mid: #2d4a3e;
+  --gold-accent: #d4a84b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Vollkorn', serif;
+  background: var(--forest-dark);
+  color: #e8f0eb;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold-accent);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e6b858;
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(45, 74, 62, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 168, 75, 0.2);
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, #d4a84b 0%, #e6b858 50%, #d4a84b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Faction colors */
+.faction-ironwood { --faction-color: #d97706; }
+.faction-eyrie { --faction-color: #3b82f6; }
+.faction-alliance { --faction-color: #10b981; }
+.faction-wanderer { --faction-color: #6b7280; }
+
+/* Clearing node styling */
+.clearing {
+  transition: all 0.3s ease;
+}
+
+.clearing:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.clearing.selected {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Card styling */
+.game-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Button effects */
+.btn-gold {
+  background: linear-gradient(135deg, #d4a84b 0%, #b8923f 100%);
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #e6b858 0%, #d4a84b 100%);
+  box-shadow: 0 4px 20px rgba(212, 168, 75, 0.4);
+}
+
+/* Tree pattern background */
+.tree-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L35 25 L25 25 Z' fill='%23275a49' opacity='0.3'/%3E%3Cpath d='M30 15 L38 35 L22 35 Z' fill='%23275a49' opacity='0.2'/%3E%3C/svg%3E");
+  background-size: 60px 60px;
+}
+
+/* Warrior piece */
+.warrior {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Building piece */
+.building {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}

@@ -1,0 +1,68 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+*.env
+
+# Build outputs
+dist/
+build/
+client/dist/
+server/dist/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage/
+.nyc_output/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Debug
+.cache/
+*.cache
+
+# Test
+.jest/
+jest-results/
+
+# MongoDB data (if running locally)
+data/db/
+
+# Redis dump
+dump.rdb
+
+# Misc
+*.bak
+*.orig
